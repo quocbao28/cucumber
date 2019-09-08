@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>MAVEN_TEST</groupId>
+	<artifactId>MAVEN_TEST</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<properties>
+		<jackson.version>2.9.7</jackson.version>
+		<cucumber.version>1.2.5</cucumber.version>
+		<webdriver.version>3.14.0</webdriver.version>
+		<testng.version>6.9.10</testng.version>
+		<poi.version>3.15</poi.version>
+		<xml-apis.version>1.4.01</xml-apis.version>
+		<cucumber-java.version>1.2.5</cucumber-java.version>
+		<cucumber-reporting.version>4.2.2</cucumber-reporting.version>
+		<cucumber-picocontainer.version>1.2.5</cucumber-picocontainer.version>
+		<junit.version>4.12</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<reportng>1.1.4</reportng>
+		<tools.version>1.6.0</tools.version>
+		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+		<guava.version>22.0</guava.version>
+		<freemarker.version>2.3.23</freemarker.version>
+		<gson.version>2.8.2</gson.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<javafaker.version>0.13</javafaker.version>
+		<webdriver.manager.version>3.0.0</webdriver.manager.version>
+		<maven-cucumber.version>3.10.0</maven-cucumber.version>
+		<maven.build.timestamp.format>yyyy-MMM-dd HH:mm z</maven.build.timestamp.format>
+		<gherkin.version>2.12.2</gherkin.version>
+		<maven-postman-plugin.version>0.1.6</maven-postman-plugin.version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${webdriver.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>${xml-apis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdriver.manager.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>${reportng}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdriver.manager.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<!-- <dependency> <groupId>com.relevantcodes</groupId> <artifactId>extentreports</artifactId> 
+			<version>2.41.2</version> </dependency> -->
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>${gherkin.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>${javafaker.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>${cucumber-reporting.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>${cucumber-picocontainer.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- Compile code -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- Run Testcase / Test suite -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.21.0</version>
+				<configuration>
+					<includes>
+						<exclude>**/*/RunPayment.java</exclude>
+					</includes>
+				</configuration>
+			</plugin>
+
+		<plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<version>${maven-postman-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>send a mail</id>
+						<phase>test</phase>
+						<goals>
+							<goal>send-mail</goal>
+						</goals>
+						<inherited>true</inherited>
+						<configuration>
+							<!-- From Email address -->
+							<from>no-reply@gmail.com</from>
+							<!-- Email subject -->
+							<subject>Test Automation Report ${maven.build.timestamp}</subject>
+							<!-- Fail the build if the mail doesnt reach -->
+							<failonerror>true</failonerror>
+							<!-- host -->
+							<mailhost>smtp.gmail.com</mailhost>
+							<!-- port of the host -->
+							<mailport>465</mailport>
+							<mailssl>true</mailssl>
+							<mailAltConfig>true</mailAltConfig>
+							<!-- Email Authentication(USernameand Password) -->
+							<mailuser>yourEmail@mail.com</mailuser>
+							<mailpassword>yourPassword</mailpassword>
+							<receivers>
+								To Email address
+								<receiver>to@user.com</receiver>
+							</receivers>
+							<fileSets>
+								<fileSet>
+									Report directory Path
+									<directory>..//Testing framework</directory>
+									<includes>
+										Report file name
+										<include>extent.html</include>
+									</includes>
+									Use
+									Regular Expressions like **/*.html if you want all the html
+									files to
+									send
+								</fileSet>
+								<fileSet>
+									Report directory Path
+									<directory>..//Testing framework//target//surefire-reports</directory>
+									<includes>
+										Report file name
+										<include>TestSuite.txt</include>
+									</includes>
+									Use Regular Expressions like **/*.html if you want all the html
+									files to
+									send
+								</fileSet>
+							</fileSets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin> 
+
+			<!-- Cucumber generate report -->
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>${maven-cucumber.version}</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>MAVEN_CUCUMBER_BANKGURU</projectName>
+							<outputDirectory>${project.build.directory}/site/cucumber-reporting</outputDirectory>
+							<cucumberOutput>${project.build.directory}/site/cucumber.json</cucumberOutput>
+							<enableFlashCharts>true</enableFlashCharts>
+							<skippedFails>true</skippedFails>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
+
