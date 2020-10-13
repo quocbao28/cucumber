@@ -17,7 +17,7 @@
 		<cucumber-java.version>1.2.5</cucumber-java.version>
 		<cucumber-reporting.version>4.2.2</cucumber-reporting.version>
 		<cucumber-picocontainer.version>1.2.5</cucumber-picocontainer.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 		<reportng>1.1.4</reportng>
 		<tools.version>1.6.0</tools.version>
